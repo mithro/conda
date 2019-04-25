@@ -4,13 +4,14 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import os
-from os.path import basename, expanduser, isdir, isfile, join
+from os.path import basename, isdir, isfile, join
 import re
 import sys
 import sysconfig
 
 from .._vendor.auxlib.decorators import memoize
 from ..common.compat import on_win
+from ..common.path import expanduser
 
 
 def find_executable(executable, include_others=True):

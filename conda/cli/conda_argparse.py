@@ -7,7 +7,7 @@ from argparse import (ArgumentParser as ArgumentParserBase, REMAINDER, RawDescri
                       SUPPRESS, _CountAction, _HelpAction)
 from logging import getLogger
 import os
-from os.path import abspath, expanduser, join
+from os.path import abspath, join
 from subprocess import Popen
 import sys
 from textwrap import dedent
@@ -15,6 +15,7 @@ from textwrap import dedent
 from .. import __version__
 from ..base.constants import COMPATIBLE_SHELLS, CONDA_HOMEPAGE_URL, DepsModifier, UpdateModifier
 from ..common.constants import NULL
+from ..common.path import expanduser
 
 log = getLogger(__name__)
 

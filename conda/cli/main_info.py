@@ -7,7 +7,7 @@ from collections import OrderedDict
 import json
 from logging import getLogger
 import os
-from os.path import exists, expanduser, isfile, join
+from os.path import exists, isfile, join
 import re
 import sys
 
@@ -15,6 +15,7 @@ from .common import print_envs_list, stdout_json
 from .. import CONDA_PACKAGE_ROOT, __version__ as conda_version
 from ..base.context import conda_in_private_env, context, env_name, sys_rc_path, user_rc_path
 from ..common.compat import iteritems, itervalues, on_win, text_type
+from ..common.path import expanduser
 from ..common.url import mask_anaconda_token
 from ..core.index import _supplement_index_with_system
 from ..models.channel import all_channel_urls, offline_keep

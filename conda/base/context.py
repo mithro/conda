@@ -8,7 +8,7 @@ from collections import OrderedDict
 from errno import ENOENT
 from logging import getLogger
 import os
-from os.path import abspath, basename, expanduser, isdir, isfile, join, split as path_split
+from os.path import abspath, basename, isdir, isfile, join, split as path_split
 import platform
 import sys
 
@@ -28,7 +28,7 @@ from ..common.compat import NoneType, iteritems, itervalues, odict, on_win, stri
 from ..common.configuration import (Configuration, ConfigurationLoadError, MapParameter,
                                     PrimitiveParameter, SequenceParameter, ValidationError)
 from ..common._os.linux import linux_get_libc_version
-from ..common.path import expand, paths_equal
+from ..common.path import expand, expanduser, paths_equal
 from ..common.url import has_scheme, path_to_url, split_scheme_auth_token
 from ..common.decorators import env_override
 

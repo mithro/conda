@@ -10,7 +10,7 @@ from glob import glob
 from itertools import chain
 from logging import getLogger
 import os
-from os.path import abspath, basename, dirname, expanduser, expandvars, isdir, join
+from os.path import abspath, basename, dirname, isdir, join
 import re
 import sys
 from textwrap import dedent
@@ -22,7 +22,7 @@ from ._vendor.toolz import concatv, drop
 from ._vendor.auxlib.compat import Utf8NamedTemporaryFile
 from .base.context import ROOT_ENV_NAME, context, locate_prefix_by_name
 from .common.compat import FILESYSTEM_ENCODING, PY2, iteritems, on_win, string_types, text_type
-from .common.path import paths_equal
+from .common.path import expanduser, expandvars, paths_equal
 
 log = getLogger(__name__)
 

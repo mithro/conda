@@ -37,7 +37,7 @@ from itertools import chain
 import json
 from logging import getLogger
 import os
-from os.path import abspath, basename, dirname, exists, expanduser, isdir, isfile, join
+from os.path import abspath, basename, dirname, exists, isdir, isfile, join
 from random import randint
 import re
 import sys
@@ -55,7 +55,8 @@ from ..activate import (CshActivator, FishActivator,
 from ..base.context import context
 from ..common.compat import (PY2, ensure_binary, ensure_utf8_encoding,
                              ensure_text_type, on_mac, on_win, open)
-from ..common.path import (expand, get_bin_directory_short_path, get_python_short_path,
+from ..common.path import (expand, expanduser, get_bin_directory_short_path,
+                           get_python_short_path,
                            get_python_site_packages_short_path, win_path_ok)
 from ..exceptions import CondaValueError
 from ..gateways.disk.create import copy, mkdir_p
